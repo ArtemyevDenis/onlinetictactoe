@@ -25,13 +25,14 @@ public class WinDialog extends Dialog {
         setContentView(R.layout.win_dialog_layout);
         final TextView messageTv = findViewById(R.id.messageTV);
         final Button startBtn = findViewById(R.id.startNewBtn);
+
         messageTv.setText(message);
 
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dismiss();
-                getContext().startActivity(new Intent(getContext(),PlayerName.class));
+                getContext().startActivity(new Intent(getContext(), PlayerName.class));
                 mainActivity.finish();
             }
         });
